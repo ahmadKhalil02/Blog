@@ -11,6 +11,15 @@ body {
   margin: 20px auto;
 }
 
+#main-nav {
+  display: flex;
+  justify-content: right;
+}
+
+#main-nav a {
+  padding: 8px;
+}
+
 input,
 textarea,
 select {
@@ -70,6 +79,6 @@ a:hover {
 
 .date {
   font-style: italic;
-  font-weight: 600;
+  font-size: 80%;
   color: #aaa;
 }
