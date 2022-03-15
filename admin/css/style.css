@@ -55,7 +55,7 @@ a:hover {
   flex-direction: row-reverse;
 }
 
-#post-list li {
+/** #post-list li {
   width: 100%;
   padding: 10px;
   border: 1px solid #999;
@@ -76,9 +76,16 @@ a:hover {
 #post-list {
   padding: 0;
 }
+*/
 
-.date {
-  font-style: italic;
-  font-size: 80%;
-  color: #aaa;
+table,
+th,
+td {
+  border: 1px solid;
+  padding: 10px;
+}
+
+table {
+  margin-top: 20px;
+  border-collapse: collapse;
 }

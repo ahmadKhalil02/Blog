@@ -10,22 +10,19 @@ async function fetchAllPosts() {
         console.log(posts);
 
         let html = ''
-        for (let post of posts) { // need to work on formatting
+        for (let post of posts) { // need to work on formatting?
             html += ` 
-                <li class="list-group-item">
-                    <p>
-                    ${post.title}<br> 
-                    by ${post.author} <br>
-                    <span class="date">${post.date}</span> <br><br>
-                    ${post.content} <br><br>
-                    Tags: ${post.tags} 
-                    </p>
-                    
-                    <div>
-                        <a href="update-post.html?id=${post._id}">Update</a> |
-                        <a href="#" class="delete-post-link" data-post-id="${post._id}">Delete</a> 
-                    </div>
-                </li>
+                    <tr>
+                        <td>${post.title}</td>
+                        <td>${post.author}</td>
+                        <td><span class="date">${post.date}</span></td>
+                        <td>
+                            <div>
+                                <a href="update-post.html?id=${post._id}">Update</a> <br>
+                                <a href="#" class="delete-post-link" data-post-id="${post._id}">Delete</a> 
+                            </div>
+                        </td>
+                    </tr>
             `
         }
 
@@ -48,7 +45,7 @@ async function fetchAllPosts() {
                     method: 'DELETE', 
                 })
                 
-                e.target.parentNode.parentNode.remove(); // removing post without reloading page
+                e.target.parentNode.parentNode.parentNode.remove(); // removing post without reloading page
             } catch (error) {
                 console.log(error)
             }

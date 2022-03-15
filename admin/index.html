@@ -17,7 +17,27 @@
             <a href="create-post.html">Create new post</a>
         </nav>
 
-        <ul id="post-list">
+        <table id="table">
+            <thead>
+                <tr>
+                    <!-- (tr) Table row-->
+                    <th>Title</th> <!-- (th) Table head-->
+                    <th>Author</th>
+                    <th>Date</th>
+                    <th>Manage</th>
+                </tr>
+            </thead>
+
+            <tbody id="post-list">
+                <!-- We want to generate this part dynamically in JS -->
+                <!-- <tr> 						
+            				<td>3</td>				
+            				<td>12 12 12</td>
+            			</tr> -->
+            </tbody>
+        </table>
+
+        <ul>
             <!-- 
                 <li class="list-group-item">
                     <p>
