@@ -14,7 +14,7 @@ async function getAllPosts() {
     for (let post of posts) {
       html += `
                 <li class="list-item">
-                    <p>${post.content} <br> <span class="date">- ${post.date}</span> </p>
+                <h3>${post.title}</h3><br><p> ${post.author} <br>${post.content} <br> <span class="date">- ${post.date}</span> </p>
                 </li>
             `;
     }
