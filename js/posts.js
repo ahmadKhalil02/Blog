@@ -1,5 +1,3 @@
-let div = document.getElementsByClassName("div");
-
 window.onload = function () {
   getAllPosts();
 };
@@ -17,15 +15,10 @@ async function getAllPosts() {
       html += `
                 <li class="list-item">
                     <p>${post.content} <br> <span class="date">- ${post.date}</span> </p>
-
-                    <div>
-                        <a href="#">Update</a> |
-                        <a href="#" class ="delete-pun-link" data-pun-id="${post._id}"=>Delete</a>
-                    </div>
                 </li>
             `;
-      div.append(post);
     }
+    document.getElementById("post-list").innerHTML = html;
   } catch (error) {
     console.log(error);
   }
