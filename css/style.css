@@ -47,6 +47,14 @@ h3 {
   margin: 10px;
 }
 
+.taggar {
+  color: grey;
+  display: flex;
+  flex-direction: row-reverse;
+  margin-top: 60px;
+  margin-right: 20px;
+}
+
 #post-list li p {
   width: 450px;
 }
