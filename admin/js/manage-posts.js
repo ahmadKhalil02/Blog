@@ -14,18 +14,19 @@ async function fetchallBlogs(){
         html += `
 
       
+        <tr>
           <td>${blog.title}</td>
           <td>${blog.author}</td>
           <td>${blog.date}</td>
           <td><a href="update-post.html?id=${blog.id}">Update</a> + <a href="#">Delete</a></td> 
- 
+            </tr>
         `
       
 
         console.log(blog.date)
     }
 
-    document.getElementById('blog-list').innerHTML = html;
+    document.getElementById('data').innerHTML = html;
 
 
     } catch(error){
