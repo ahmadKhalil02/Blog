@@ -18,7 +18,7 @@ async function fetchallBlogs(){
           <td>${blog.title}</td>
           <td>${blog.author}</td>
           <td>${blog.date}</td>
-          <td><a href="update-post.html?id=${blog.id}">Update</a> + <a href="#">Delete</a></td> 
+          <td><a href="update-post.html?id=${blog.id}">Update</a> <a href="#">Delete</a></td> 
             </tr>
         `
       
