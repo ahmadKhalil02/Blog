@@ -10,18 +10,19 @@ async function getAllPosts() {
 
     let html = "";
     for (let post of posts) {
-      // let content = post.content;
-      wordLength();
       html += `
                 <li class="list-item">
-                <h3>${post.title}</h3><br><p> ${post.author} <br>${post.content} <br> <span class="date">- ${post.date}</span> </p>
-                <a href ="http://localhost:5000/posts/${post._id}">Till inlägget</a></li>
+                <h3>${post.title}</h3><br><span class="date">Author: ${
+        post.author
+      } <br> Date: ${
+        post.date
+      } </span><br> <div class="flexbox"><p><br>${post.content
+        .split(" ", 10)
+        .join(" ")} <br><a href ="http://localhost:5000/posts/${
+        post._id
+      }">Läs mer...</a></div></li>
+                
             `;
-
-      function wordLength() {
-        const contentArray = post.content.split(" ", 15);
-        console.log(contentArray);
-      }
     }
 
     document.getElementById("post-list").innerHTML = html;
@@ -37,14 +38,14 @@ async function getAllPosts() {
 // man nå adminpanelen och gå tillbaka till index.
 // if (content.length < 50)
 
-function removeWords(content, value) {
-  var i = 0;
-  while (i < content.length) {
-    if (content[i] === value) {
-      content.splice(i, 1);
-    } else {
-      ++i;
-    }
-  }
-  return arr;
-}
+// function removeWords(content, value) {
+//   var i = 0;
+//   while (i < content.length) {
+//     if (content[i] === value) {
+//       content.splice(i, 1);
+//     } else {
+//       ++i;
+//     }
+//   }
+//   return arr;
+// }
