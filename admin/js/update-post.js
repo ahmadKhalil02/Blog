@@ -48,7 +48,7 @@ window.onload = function () {
                 })
 
                 if (!response.ok) {
-                    throw new Error('Something went wrong with the API')
+                    throw new Error('Something went wrong')
                 }
 
                 window.location.replace('index.html') // redirecting to index.html

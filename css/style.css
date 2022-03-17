@@ -1,14 +1,15 @@
 * {
   box-sizing: border-box;
+  list-style-type: none;
 }
 
 body {
-  background-color: lightsteelblue;
+  background-color: white;
 }
 
 #container {
   width: 600px;
-  margin: 20px auto;
+  margin: 30px auto;
 }
 
 input,
@@ -32,12 +33,18 @@ form a {
 
 a {
   text-decoration: none;
-  color: darkblue;
+  color: #009879;
 }
 
 a:hover {
   text-decoration: underline;
-  color: rgba(42, 42, 187, 0.692);
+  color: #009879;
+}
+
+h3 {
+  color: #009879;
+  font-size: 40px;
+  background: #ffffff;
 }
 
 #main-nav {
@@ -46,22 +53,30 @@ a:hover {
   flex-direction: row-reverse;
 }
 
-#post-list li {
+.flexbox {
   width: 100%;
-  padding: 10px;
-  border: 1px solid #999;
-  background-color: white;
   display: flex;
   justify-content: space-between;
 }
 
-#post-list li p {
-  width: 450px;
+#post-list,
+#post-list li {
+  padding: 10px;
+  border: 1px solid #999;
+  background-color: #ffffff;
+  margin: 10px;
 }
 
-#post-list li:first-child {
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
+.taggar {
+  color: grey;
+  display: flex;
+  flex-direction: row-reverse;
+  margin-top: 60px;
+  margin-right: 20px;
+}
+
+#post-list li p {
+  width: 450px;
 }
 
 #post-list {
@@ -72,4 +87,8 @@ a:hover {
   font-style: italic;
   font-weight: 600;
   color: #aaa;
+}
+
+.postStyle {
+  background-color: blue;
 }
