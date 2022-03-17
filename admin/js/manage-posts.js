@@ -10,12 +10,13 @@ async function fetchAllPosts() {
         console.log(posts);
 
         let html = ''
-        for (let post of posts) { // need to work on formatting?
+        for (let post of posts) { 
             html += ` 
                     <tr>
                         <td>${post.title}</td>
                         <td>${post.author}</td>
                         <td><span class="date">${post.date}</span></td>
+                        <td>${post.tags}</td>
                         <td>
                             <div>
                                 <a href="update-post.html?id=${post._id}">Update</a> <br>
