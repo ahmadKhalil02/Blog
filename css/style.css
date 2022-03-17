@@ -4,7 +4,7 @@
 }
 
 body {
-  background-color: #e7e7e7e7;
+  background-color: white;
 }
 
 #container {
@@ -14,18 +14,18 @@ body {
 
 a {
   text-decoration: none;
-  color: #c99b5f;
+  color: #009879;
 }
 
 a:hover {
   text-decoration: underline;
-  color: #c99b5f;
+  color: #009879;
 }
 
 h3 {
-  color: #c99b5f;
+  color: #009879;
   font-size: 40px;
-  background: white;
+  background: #ffffff;
 }
 
 #main-nav {
@@ -43,7 +43,7 @@ h3 {
 #post-list li {
   padding: 10px;
   border: 1px solid #999;
-  background-color: white;
+  background-color: #ffffff;
   margin: 10px;
 }
 
