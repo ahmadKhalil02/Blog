@@ -6,22 +6,25 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <div id="container">
-        <h1>New blog post</h1>
+   <div class="blog-container">
+    <h1>New Blog post</h1>
+        </div>
+    
+        <div id="container-form">
 
         <form id="create-blog-form">
             
     
-            <label for="">Title</label>
-            <textarea name="title" id="title-textarea" cols="10" rows="2"></textarea>
+            <label for="">Title:</label>
+            <textarea name="title" id="title-textarea" placeholder="Enter a title" maxlength="50"></textarea> 
 
-            <label for="">Author</label>
-            <textarea name="author" id="author-textarea" cols="10" rows="2"></textarea>
+            <label for="">Author:</label>
+            <textarea name="author" id="author-textarea" placeholder= "Enter Author name"maxlength="50"></textarea>
 
-            <label for="">Content</label>
-            <textarea name="content" id="content-textarea" cols="30" rows="10"></textarea>
+            <label for="">Content:</label>
+            <textarea name="content" id="content-textarea" placeholder="Enter content"></textarea>
 
-            <input type="submit" value="Create">
+            <input class= "button" type="submit" value="Create">
             <a href="index.html">&#x2190; back</a>
         </form>
     </div>

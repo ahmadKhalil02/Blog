@@ -2,23 +2,9 @@
     box-sizing: border-box;
 }
 
-/* body {
-    background-color: lightsteelblue;
-} */
-
-
 #container {
-    width: 600px;
+    width: 700px;
     margin: 20px auto;
-}
-
-input,
-textarea,
-select {
-    width: 100%;
-    margin-bottom: 10px;
-    border-radius: 5px;
-    border: 1px solid #333;
 }
 
 input {
@@ -27,6 +13,7 @@ input {
 
 form a {
     width: 100%;
+    margin-top: 20px;
     display: block;
     text-align: center;
 }
@@ -41,7 +28,7 @@ a:hover {
     color: rgba(42, 42, 187, 0.692);
 }
 
-#main-nav {
+#main-nav, #main-nav2 {
     width: 100%;
     display: flex;
     flex-direction: row-reverse;
@@ -74,7 +61,7 @@ a:hover {
 }
 
 .content-table tbody tr:hover{
-    font-weight: bold;
+    /* font-weight: bold; */
     color: #009879;
 }
 
@@ -84,4 +71,86 @@ a:hover {
 
 .content-table tbody tr:last-of-type{
     border-bottom: 2px solid #009879;
+}
+
+.blog-container{
+    display: flex;
+    justify-content: center;
+ }
+
+ #container-form {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+}
+
+#title-textarea,
+#author-textarea,
+#content-textarea{
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    resize: none;
+    height: 100px;
+    background-color: #dddddd;
+    color: #666666;
+    padding: 1em;
+    border-radius: 10px;
+    border: 2px solid transparent;
+    outline: none;
+    }
+
+#title-textarea:focus{
+    cursor: text;
+    color: #333333;
+    background-color: white;
+    border-color: #333333;
+}
+
+#author-textarea:focus{
+    cursor: text;
+    color: #333333;
+    background-color: white;
+    border-color: #333333;
+}
+
+#content-textarea:focus{
+    cursor: text;
+    color: #333333;
+    background-color: white;
+    border-color: #333333;
+}
+
+
+.button{
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+    margin-left: 185px;
+    padding: 10px;
+    width: 50%;
+    font-weight: 400;
+    text-decoration: none;
+    font-size: 1.25rem;
+    background-color: #000;
+    color: white;
+    border-radius: 30px;
+    transition: transform 0.3s ease;
+}
+
+.button:after, .button:before{
+    content: "";
+    opacity: 0.3;
+    background: black;
+    border-radius: inherit;
+    z-index: -1;
+    transition: transform 0.3s ease;
+}
+
+.button:hover{
+    transform: translate(-12px,-12px) ;
+}
+
+#content-textarea{
+    height: 160px;
 }
