@@ -4,7 +4,7 @@
 }
 
 body {
-  background-color: white;
+  background-color: #dddddd;
 }
 
 #container {
@@ -14,16 +14,17 @@ body {
 
 a {
   text-decoration: none;
-  color: #009879;
+  color: darkblue;
 }
 
 a:hover {
   text-decoration: underline;
-  color: #009879;
+  color: darkblue;
+  /* color: #009879; */
 }
 
 h3 {
-  color: #009879;
+  color: #000000;
   font-size: 40px;
   background: #ffffff;
 }
@@ -37,14 +38,20 @@ h3 {
 .flexbox {
   width: 100%;
   display: flex;
-  justify-content: space-between;
 }
 
-#post-list li {
+#post-list li,
+.list-group-item {
   padding: 10px;
   border: 1px solid #999;
   background-color: #ffffff;
   margin: 10px;
+}
+
+.post-taggar {
+  margin-top: 200px;
+  color: grey;
+  position: relative;
 }
 
 .taggar {
