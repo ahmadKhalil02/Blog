@@ -8,6 +8,11 @@ body {
 }
 
 #container {
+  width: 800px;
+  margin: 30px auto;
+}
+
+#container-index {
   width: 600px;
   margin: 30px auto;
 }
@@ -36,8 +41,7 @@ h3 {
 }
 
 .flexbox {
-  width: 100%;
-  display: flex;
+  width: 90%;
 }
 
 #post-list li,
@@ -46,10 +50,11 @@ h3 {
   border: 1px solid #999;
   background-color: #ffffff;
   margin: 10px;
+  border-radius: 10px;
 }
 
 .post-taggar {
-  margin-top: 200px;
+  display: block;
   color: grey;
   position: relative;
 }
@@ -67,11 +72,6 @@ h3 {
 }
 #post-list {
   padding: 0;
-}
-
-#post-list li:first-child {
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
 }
 
 .date {
