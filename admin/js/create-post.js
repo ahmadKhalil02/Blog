@@ -27,7 +27,7 @@ try {
         throw new Error('Something went wrong')
     }
 
-    window.location.replace('index.html') // redirects to index.html
+    window.location.replace('index.html')
 } catch(error) {
     console.log(error);
 };
