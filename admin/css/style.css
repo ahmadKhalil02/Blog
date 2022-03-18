@@ -86,12 +86,13 @@ a:hover {
 
 #title-textarea,
 #author-textarea,
-#content-textarea{
+#content-textarea,
+#tags-textarea{
     width: 100%;
     margin-top: 10px;
     margin-bottom: 10px;
     resize: none;
-    height: 100px;
+    height: 50px;
     background-color: #dddddd;
     color: #666666;
     padding: 1em;
@@ -121,12 +122,19 @@ a:hover {
     border-color: #333333;
 }
 
+#tags-textarea:focus{
+    cursor: text;
+    color: #333333;
+    background-color: white;
+    border-color: #333333;
+}
+
 
 .button{
     display: block;
     text-align: center;
     margin-top: 20px;
-    margin-left: 185px;
+    margin-left: 250px;
     padding: 10px;
     width: 50%;
     font-weight: 400;
