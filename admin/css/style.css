@@ -146,6 +146,23 @@ a:hover {
     transition: transform 0.3s ease;
 }
 
+.big-button{
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+    margin-left: 180px;
+    padding: 10px;
+    width: 50%;
+    font-weight: 400;
+    text-decoration: none;
+    font-size: 1.25rem;
+    background-color: #000;
+    color: white;
+    border-radius: 30px;
+    transition: transform 0.3s ease;
+
+}
+
 .button:after, .button:before{
     content: "";
     opacity: 0.3;
@@ -155,10 +172,34 @@ a:hover {
     transition: transform 0.3s ease;
 }
 
+.big-button:after, .big-button:before{
+    content: "";
+    opacity: 0.3;
+    background: black;
+    border-radius: inherit;
+    z-index: -1;
+    transition: transform 0.3s ease;
+}
+
+
 .button:hover{
+    transform: translate(-12px,-12px) ;
+}
+
+.big-button:hover{
     transform: translate(-12px,-12px) ;
 }
 
 #content-textarea{
     height: 160px;
+}
+
+input,
+textarea,
+select {
+    width: 100%;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: none;
+    background-color: #dddddd;
 }

@@ -6,6 +6,24 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+    <div id="container">
+        <h1>Update post</h1>
+        <form id="update-post-form">
+            <label for="">Title</label>
+            <input type="text" id="title-textarea" name="title" required>
+            <label for="">Author</label>
+            <input type="text" id="author-textarea" name="author" required>
+            <label for="">Content</label>
+            <textarea name="content" id="content-textarea" cols="30" rows="10" required></textarea>
+            <label for="">Tags</label>
+            <select id="tag-options" multiple="multiple">
+            </select>
+            <div class="buttons">
+                <input type="submit" class="big-button" value="Update">
+            </div>
+            <a href="index.html">&#x2190; back</a>
+        </form>
+    </div>
     <script src="js/update-post.js"></script>
 </body>
 </html>
