@@ -24,9 +24,8 @@ async function getAllPosts() {
         post.date
       } </span><br> <div class="flexbox"><p><br>${post.content
         .split(" ", 20)
-        .join(" ")} <br><a href ="http://localhost:5000/posts/${
-        post._id
-      }">Läs mer...</a>
+        .join(" ")} <br><a href="post.html?id=${post._id}">Read more...</a>
+      
       <p class ="taggar">Tags: ${tags}</p>
       </div></li>
                 
