@@ -14,15 +14,17 @@
 
         <form id="create-post-form">
             <label for="">Title</label>
-            <textarea name="title" id="title-textarea" cols="30" rows="1" required></textarea>
+            <input type="text" id="title-textarea" name="title" required>
             <label for="">Author</label>
-            <textarea name="author" id="author-textarea" cols="30" rows="1" required></textarea>
+            <input type="text" id="author-textarea" name="author" required>
             <label for="">Content</label>
             <textarea name="content" id="content-textarea" cols="30" rows="10" required></textarea>
             <label for="">Tags</label>
             <textarea name="tags" id="tags-textarea" cols="20" rows="5"></textarea>
 
-            <input type="submit" value="Create">
+            <div class="buttons">
+                <input type="submit" class="big-button" value="Create">
+            </div>
             <a href="index.html">&#x2190; back</a>
         </form>
     </div>

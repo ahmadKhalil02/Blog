@@ -11,10 +11,22 @@ window.onload = function () {
             const response = await fetch(`http://localhost:5000/posts/${urlParams.get('id')}`)
             const post = await response.json();
 
-            document.getElementById('title-textarea').innerText = post.title;
-            document.getElementById('author-textarea').innerText = post.author;
+            document.getElementById('title-textarea').value = post.title;
+            document.getElementById('author-textarea').value = post.author;
             document.getElementById('content-textarea').innerText = post.content;
-            document.getElementById('tags-textarea').innerText = post.tags;
+            
+            let html = ''
+            if (Array.isArray(post.tags)) {
+                for (var i = 0; i < post.tags.length; i++) {
+                    html += `
+                                <option selected="selected">${post.tags[i]}</option>        
+                    `
+                }
+            } else {
+                tags = "";
+            }
+            document.getElementById('tag-options').innerHTML = html;
+            
         } catch (error) {
             console.log(error)
         }
@@ -39,10 +51,9 @@ window.onload = function () {
                 const response = await fetch(`http://localhost:5000/posts/${urlParams.get('id')}`, {
                     method: 'PATCH', // patching to overwrite!
                     headers: {
-                        'Title-Type': 'application/json',
-                        'Author-Type': 'application/json',
+                        
                         'Content-Type': 'application/json',
-                        'Tags-Type': 'application/json',
+
                     },
                     body: JSON.stringify(JSONString),
                 })

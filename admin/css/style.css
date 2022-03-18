@@ -1,14 +1,19 @@
 * {
   box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 body {
-  background-color: lightsteelblue;
+  background-color: white;
+}
+
+h1 {
+  text-align: center;
 }
 
 #container {
-  width: 600px;
-  margin: 20px auto;
+  width: 700px;
+  margin: 30px auto;
 }
 
 #main-nav {
@@ -26,17 +31,36 @@ select {
   width: 100%;
   margin-bottom: 10px;
   border-radius: 5px;
-  border: 1px solid #333;
+  border: none;
+  background-color: #dddddd;
 }
 
-input {
+#title-textarea,
+#author-textarea {
+  line-height: 30px;
+  font-size: 17px;
+}
+
+.buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.big-button {
+  width: 60%;
   padding: 10px;
+  background-color: black;
+  color: white;
+  border: none;
+  border-radius: 20px;
 }
 
 form a {
   width: 100%;
   display: block;
-  text-align: center;
+  text-align: right;
 }
 
 a {
@@ -54,29 +78,6 @@ a:hover {
   display: flex;
   flex-direction: row-reverse;
 }
-
-/** #post-list li {
-  width: 100%;
-  padding: 10px;
-  border: 1px solid #999;
-  background-color: white;
-  display: flex;
-  justify-content: space-between;
-}
-
-#post-list li p {
-  width: 450px;
-}
-
-#post-list li:first-child {
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
-}
-
-#post-list {
-  padding: 0;
-}
-*/
 
 table,
 th,

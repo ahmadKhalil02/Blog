@@ -5,7 +5,7 @@ window.onload = function () {
     console.log(urlParams.get('id'));
 
     fetchPost(urlParams);
-    /** updatePostEvent(urlParams); */
+  
 
     async function fetchPost(urlParams) {
         try {
