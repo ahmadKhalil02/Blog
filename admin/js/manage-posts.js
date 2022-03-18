@@ -1,58 +1,56 @@
-window.onload = function(){
-    fetchallBlogs();
-};
 
-async function fetchallBlogs(){
-    try{
-        const response = await fetch ('http://localhost:5000/posts')
-        const blogs = await response.json();
-    
-        let html = ''
-        for(let blog of blogs){
-        html += `
-
-        <tr>
-          <td>${blog.title}</td>
-          <td>${blog.author}</td>
-          <td>${blog.date}</td>
-          <td>
-          <div>
-          <a id= "update-post" href="update-post.html?id=${blog._id}">Update</a> 
-          <a href="#" class="delete-post-link" data-blog-id="${blog._id}">Delete</a>
-          </div>  
-                </td> 
-          </tr>
-
-        `
-    }
-
-    document.getElementById('data').innerHTML = html;
-    } catch(error){
-        console.log(error)
-    }
+window.onload = function () {
+    fetchAllPosts();
 }
 
- // function deleteBlog
+async function fetchAllPosts() {
+    try {
+        const response = await fetch('http://localhost:5000/posts')
+        const posts = await response.json();
+        console.log(posts);
 
- const deleteBlogLinks = document.getElementsByClassName('delete-post-link')
- console.log(deleteBlogLinks)
+        let html = ''
+        for (let post of posts) { 
+            html += ` 
+                    <tr>
+                        <td>${post.title}</td>
+                        <td>${post.author}</td>
+                        <td><span class="date">${post.date}</span></td>
+                        <td>${post.tags}</td>
+                        <td>
+                            <div>
+                                <a href="update-post.html?id=${post._id}">Update</a> <br>
+                                <a href="#" class="delete-post-link" data-post-id="${post._id}">Delete</a> 
+                            </div>
+                        </td>
+                    </tr>
+            `
+        }
 
- for (let link of deleteBlogLinks) {
-     link.addEventListener('click', async function(e) {
-        e.preventDefault();
+        document.getElementById('data').innerHTML = html;
+    } catch(error) {
+        console.log(error)
+    }
 
-         const blogId = e.target.dataset.blogId
+    // function deletePost
+    const deletePostLinks = document.getElementsByClassName('delete-post-link');
 
-         try {
-             await fetch(`http://localhost:5000/posts/${blogId}`,{
-                 method: 'DELETE', 
-             })
-             
-            //  e.target.parentNode.parentNode.parentNode.remove(); // removing post without reloading page
-         } catch (error) {
-             console.log(error)
-         }
-     })
- }
+    for (let link of deletePostLinks) {
+        link.addEventListener('click', async function(e) {
+            e.preventDefault();
 
+            const postId = e.target.dataset.postId
 
+            try {
+                await fetch(`http://localhost:5000/posts/${postId}`,{
+                    method: 'DELETE', 
+                })
+                
+                e.target.parentNode.parentNode.parentNode.remove(); // removing post without reloading page
+            } catch (error) {
+                console.log(error)
+            }
+        })
+    }
+
+}
